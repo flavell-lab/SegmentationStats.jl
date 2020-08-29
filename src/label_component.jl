@@ -26,8 +26,18 @@ function mark_search_pix!(img_bin, img_label, x, y, n, img_size)
     end # i
 end
 
+"""
+    label_2d!(img_bin, img_label)
+Label components given binary image.
+`img_label` is marked either -1 or n> 0
+0: not seached; -1: searched, nothing to segment; [1, n]: object number
+Arguments
+---------
+* `img_bin`: binary image segmented
+* `img_label`: array to label
+"""
 function label_2d!(img_bin, img_label)
-    # img_seg: marking searched pixel and object number
+    # img_label: marking searched pixel and object number
     # 0: not seached; -1: searched, nothing to segment; [1, n]: object number
     @assert size(img_bin) == size(img_label)
 
