@@ -6,6 +6,9 @@ include("stats.jl")
 export mark_search_pix!,
     label_2d!,
     # stats
+    moment,
+    centroid,
+    get_centroids,
     weighted_moment,
     weighted_centroid,
     # segmented_instance
