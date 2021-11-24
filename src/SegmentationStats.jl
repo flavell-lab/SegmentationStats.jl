@@ -9,6 +9,7 @@ export mark_search_pix!,
     moment,
     centroid,
     get_centroids,
+    get_centroids_round,
     weighted_moment,
     weighted_centroid,
     # segmented_instance
