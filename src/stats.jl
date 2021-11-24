@@ -78,6 +78,16 @@ function get_centroids(img_roi)
     list_id = sort(unique(img_roi))[2:end]
     list_centroid = []
     for roi = list_id
+        push!(list_centroid, centroid(findall(img_roi .== roi)))
+    end
+    
+    list_centroid
+end
+    
+function get_centroids_round(img_roi)
+    list_id = sort(unique(img_roi))[2:end]
+    list_centroid = []
+    for roi = list_id
         push!(list_centroid, round.(centroid(findall(img_roi .== roi))))
     end
     
