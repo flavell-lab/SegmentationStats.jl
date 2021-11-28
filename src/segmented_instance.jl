@@ -12,7 +12,7 @@ mutable struct SegmentedInstance
         area_weighted = weighted_moment(img_raw, list_idx, 0, 0)
         area = weighted_moment(img_bin, list_idx, 0, 0)
 
-        new(n, x_bar, y_bar, area, area_weighted, list_idx)
+        new(n, Int(round(x_bar)), Int(round(y_bar)), area, area_weighted, list_idx)
     end
 end
 
